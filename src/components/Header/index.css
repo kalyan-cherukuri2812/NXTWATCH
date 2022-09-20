@@ -1,0 +1,149 @@
+.header {
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-link {
+  width: 25%;
+}
+.header-logo {
+  width: 100%;
+}
+.header-icons-div {
+  display: flex;
+  align-items: center;
+}
+.header-icons {
+  font-size: 25px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.header-profile-img {
+  display: none;
+}
+.logout-btn {
+  display: none;
+}
+
+.dark-text {
+  color: white;
+}
+.light-text {
+  color: black;
+}
+
+.logout-popup {
+  border-radius: 16px;
+}
+.popup-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.popup-p {
+  font-family: bree serif;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.pop-up-btn-div {
+  display: flex;
+  flex-direction: row;
+}
+.close-button {
+  background-color: transparent;
+  padding: 8px;
+  font-family: roboto;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: gray;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.confirm-button {
+  background-color: #3b82f6;
+  padding: 8px;
+  font-family: roboto;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  border: 2px solid #3b82f6;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+/*popup-opyions*/
+
+.pop-opt-div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  padding-top: 80px;
+  padding-left: 35%;
+}
+.opt-close-button {
+  align-self: flex-end;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 25px;
+}
+.close-icon {
+  font-size: 25px;
+}
+.opt-div {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 576px) {
+  .header-link {
+    max-width: 150px;
+  }
+  .popup-p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mid-devi {
+    display: none;
+  }
+  .header-logo {
+    margin-left: 30px;
+  }
+  .header-profile-img {
+    display: block;
+    width: 30px;
+    margin-left: 15px;
+  }
+  .header-icons-div {
+    margin-right: 30px;
+  }
+  .logout-btn {
+    display: block;
+    background-color: transparent;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    font-weight: 600;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    border-radius: 3px;
+  }
+}

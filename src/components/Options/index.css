@@ -1,0 +1,56 @@
+/*options*/
+
+.link-opt {
+  text-decoration: none;
+}
+
+.options {
+  display: none;
+
+  height: 100%;
+  width: 280px;
+}
+.options-ul {
+  padding: 0px;
+  width: 100%;
+}
+.options-li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  font-family: roboto;
+  font-size: 15px;
+  font-weight: 500;
+
+  padding-left: 18px;
+}
+
+.option-icons {
+  margin-right: 20px;
+  font-size: 25px;
+}
+.red-icon {
+  color: red;
+}
+.contact-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-family: roboto;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.fb-tw-li-logo {
+  width: 35px;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .options {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

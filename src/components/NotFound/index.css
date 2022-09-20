@@ -1,0 +1,15 @@
+.not-found-div {
+  padding: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: roboto;
+}
+.n-f-img {
+  width: 70%;
+}
+.n-f-p {
+  color: gray;
+}

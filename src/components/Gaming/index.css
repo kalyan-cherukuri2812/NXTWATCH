@@ -1,0 +1,32 @@
+.gm-ul {
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 20px;
+  font-family: roboto;
+}
+.gm-link {
+  text-decoration: none;
+  display: flex;
+  width: 48%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.gm-li {
+  list-style-type: none;
+  width: 100%;
+}
+.gm-img {
+  width: 100%;
+}
+.gm-p {
+  color: gray;
+}
+
+@media screen and (min-width: 576px) {
+  .gm-link {
+    width: 31%;
+  }
+}
