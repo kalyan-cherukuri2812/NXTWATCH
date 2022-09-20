@@ -50,50 +50,7 @@ export default class SavedVideos extends Component {
                     </h1>
                   </div>
 
-                  <ul className="tr-ul">
-                    {savedVideosList.map(each => (
-                      <Link
-                        key={each.id}
-                        className="tr-link"
-                        to={`/Videos/${each.id}`}
-                      >
-                        <li className="tr-li">
-                          <img
-                            className="tr-img"
-                            src={each.thumbnailUrl}
-                            alt="img"
-                          />
-                          <div className="title-profile-card">
-                            <img
-                              className="profile-img"
-                              src={each.profileImageUrl}
-                              alt="profileImageUrl"
-                            />
-                            <div className="title-div">
-                              <h3
-                                className={`title ${
-                                  isDarkMode ? 'dark-text' : 'light-text'
-                                }`}
-                              >
-                                {each.title}
-                              </h3>
-                              <div className="n-v-p-div">
-                                <p className="name-h">{each.name}</p>
-                                <ul className="v-p-ul">
-                                  <li className="v-c-li-v">{each.viewCount}</li>
-                                  <li className="v-c-li-p">
-                                    {each.publishedAt}
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </Link>
-                    ))}
-                  </ul>
-
-                  {savedVideosList.length === 0 ? (
+                  {savedVideosList === null ? (
                     <div className="no-results-div">
                       <img
                         className="no-results-img"
@@ -107,7 +64,52 @@ export default class SavedVideos extends Component {
                         You can save your videos while watching them
                       </p>
                     </div>
-                  ) : null}
+                  ) : (
+                    <ul className="tr-ul">
+                      {savedVideosList.map(each => (
+                        <Link
+                          key={each.id}
+                          className="tr-link"
+                          to={`/Videos/${each.id}`}
+                        >
+                          <li className="tr-li">
+                            <img
+                              className="tr-img"
+                              src={each.thumbnailUrl}
+                              alt="img"
+                            />
+                            <div className="title-profile-card">
+                              <img
+                                className="profile-img"
+                                src={each.profileImageUrl}
+                                alt="profileImageUrl"
+                              />
+                              <div className="title-div">
+                                <h3
+                                  className={`title ${
+                                    isDarkMode ? 'dark-text' : 'light-text'
+                                  }`}
+                                >
+                                  {each.title}
+                                </h3>
+                                <div className="n-v-p-div">
+                                  <p className="name-h">{each.name}</p>
+                                  <ul className="v-p-ul">
+                                    <li className="v-c-li-v">
+                                      {each.viewCount}
+                                    </li>
+                                    <li className="v-c-li-p">
+                                      {each.publishedAt}
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </Link>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             </div>

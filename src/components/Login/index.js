@@ -1,7 +1,6 @@
 import './index.css'
 import {Component} from 'react'
 import {Redirect} from 'react-router-dom'
-
 import Cookies from 'js-cookie'
 import propsContext from '../../context/context'
 
@@ -44,9 +43,9 @@ class Login extends Component {
     console.log(response)
     console.log(respData)
     if (response.ok) {
+      Cookies.set('jwt_token', respData.jwt_token, 30)
       const {history} = this.props
       history.replace('/')
-      Cookies.set('jwt_token', respData.jwt_token, 30)
       this.setState({errorMsg: '', errStstus: false})
     } else {
       this.setState({errorMsg: respData.error_msg, errStstus: true})

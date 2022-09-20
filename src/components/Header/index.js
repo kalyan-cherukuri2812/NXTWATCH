@@ -232,9 +232,17 @@ class Header extends Component {
                   className="logout-popup"
                 >
                   {close => (
-                    <div className="popup-card">
+                    <div
+                      className={`popup-card ${
+                        isDarkMode ? 'dark-bg' : 'light-bg'
+                      }`}
+                    >
                       <div>
-                        <p className="popup-p">
+                        <p
+                          className={`popup-p ${
+                            isDarkMode ? 'dark-text' : 'light-text'
+                          }`}
+                        >
                           Are you sure you want to logout?
                         </p>
                       </div>
